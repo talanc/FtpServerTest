@@ -1,0 +1,77 @@
+﻿Press ENTER/RETURN to close the test application.
+2016-01-17 16:11:14.3693 INFO 127.0.0.1:55901 Connected from 127.0.0.1:55901
+2016-01-17 16:11:14.4004 TRACE 127.0.0.1:55901 220 FTP Server Ready
+2016-01-17 16:11:14.4865 TRACE 127.0.0.1:55901 USER anonymous
+2016-01-17 16:11:14.4865 DEBUG 127.0.0.1:55901 331 User anonymous logged in, needs password
+2016-01-17 16:11:14.4865 TRACE 127.0.0.1:55901 PASS **************** (password omitted)
+2016-01-17 16:11:14.5006 TRACE 127.0.0.1:55901 230 Password ok, FTP server ready
+2016-01-17 16:11:14.5006 TRACE 127.0.0.1:55901 FEAT
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901 211-Extensions supported:
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  MFCT
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  MFF modify;create;
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  MFMT
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  MLST type*;size*;perm*;modify*;create*;
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  REST STREAM
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  MDTM
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  UTF8
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  EPSV
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  EPRT
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  SIZE
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  AUTH TLS
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  PROT
+2016-01-17 16:11:14.5206 DEBUG 127.0.0.1:55901  PBSZ
+2016-01-17 16:11:14.5206 TRACE 127.0.0.1:55901 211 END
+2016-01-17 16:11:14.5365 TRACE 127.0.0.1:55901 OPTS UTF8 ON
+2016-01-17 16:11:14.5365 TRACE 127.0.0.1:55901 200 Command okay.
+2016-01-17 16:11:14.5365 TRACE 127.0.0.1:55901 PWD
+2016-01-17 16:11:14.5365 TRACE 127.0.0.1:55901 257 "/"
+2016-01-17 16:11:14.5507 TRACE 127.0.0.1:55901 PWD
+2016-01-17 16:11:14.5507 TRACE 127.0.0.1:55901 257 "/"
+2016-01-17 16:11:14.5507 TRACE 127.0.0.1:55901 TYPE I
+2016-01-17 16:11:14.5507 TRACE 127.0.0.1:55901 200 Binary transfer mode active. 
+2016-01-17 16:11:14.5697 TRACE 127.0.0.1:55901 EPSV
+2016-01-17 16:11:14.5697 TRACE 127.0.0.1:55901 229 Entering Passive Mode (|1||55902|).
+2016-01-17 16:11:14.6367 ERROR 127.0.0.1:55901 Failed to process message (EPSV ) System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.BeginSend(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, AsyncCallback callback, Object state)
+   at System.Net.Sockets.NetworkStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   at System.IO.Stream.<>c.<BeginEndWriteAsync>b__53_0(Stream stream, ReadWriteParameters args, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncTrim[TInstance,TArgs](TInstance thisRef, TArgs args, Func`5 beginMethod, Func`3 endMethod)
+   at System.IO.Stream.BeginEndWriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at Sockets.Plugin.Abstractions.TcpSocketClientExtensions.TwoWayStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken) in c:\Users\rdavis\Source\Repos\sockets-for-pcl\Sockets\Sockets.Plugin.Abstractions\Extensions\TcpSocketClientExtensions.cs:line 60
+   at FubarDev.FtpServer.FtpConnection.<WriteAsync>d__41.MoveNext() in C:\Users\talan\Projects\FtpServer\FubarDev.FtpServer\FtpConnection.cs:line 158
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at FubarDev.FtpServer.CommandHandlers.PasvCommandHandler.<Process>d__2.MoveNext() in C:\Users\talan\Projects\FtpServer\FubarDev.FtpServer\CommandHandlers\PasvCommandHandler.cs:line 81
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at FubarDev.FtpServer.FtpConnection.<ProcessMessage>d__49.MoveNext() in C:\Users\talan\Projects\FtpServer\FubarDev.FtpServer\FtpConnection.cs:line 365
+2016-01-17 16:11:14.7152 WARN 127.0.0.1:55901 501 Syntax error in parameters or arguments.
+2016-01-17 16:11:14.7573 ERROR 127.0.0.1:55901 Failed to process connection System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.BeginSend(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, AsyncCallback callback, Object state)
+   at System.Net.Sockets.NetworkStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   at System.IO.Stream.<>c.<BeginEndWriteAsync>b__53_0(Stream stream, ReadWriteParameters args, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncTrim[TInstance,TArgs](TInstance thisRef, TArgs args, Func`5 beginMethod, Func`3 endMethod)
+   at System.IO.Stream.BeginEndWriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at Sockets.Plugin.Abstractions.TcpSocketClientExtensions.TwoWayStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken) in c:\Users\rdavis\Source\Repos\sockets-for-pcl\Sockets\Sockets.Plugin.Abstractions\Extensions\TcpSocketClientExtensions.cs:line 60
+   at FubarDev.FtpServer.FtpConnection.<WriteAsync>d__41.MoveNext() in C:\Users\talan\Projects\FtpServer\FubarDev.FtpServer\FtpConnection.cs:line 158
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at FubarDev.FtpServer.FtpConnection.<ProcessMessage>d__49.MoveNext() in C:\Users\talan\Projects\FtpServer\FubarDev.FtpServer\FtpConnection.cs:line 380
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at FubarDev.FtpServer.FtpConnection.<ProcessMessages>d__48.MoveNext() in C:\Users\talan\Projects\FtpServer\FubarDev.FtpServer\FtpConnection.cs:line 300
+2016-01-17 16:11:14.8153 INFO 127.0.0.1:55901 Disconnection from 127.0.0.1:55901

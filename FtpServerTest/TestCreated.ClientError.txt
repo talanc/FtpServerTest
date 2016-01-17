@@ -1,0 +1,25 @@
+﻿Test Name:	TestCreated
+Test FullName:	FtpTest.FtpTests.TestCreated
+Test Source:	C:\Users\talan\Projects\FtpServerTest\FtpServerTest\FtpServerTest\FtpTests.cs : line 31
+Test Outcome:	Failed
+Test Duration:	0:00:00.7583821
+
+Result StackTrace:	
+at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+ --- End of inner exception stack trace ---
+    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.FtpClient.FtpSocketStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.FtpClient.FtpSocketStream.ReadLine(Encoding encoding)
+   at System.Net.FtpClient.FtpClient.GetReply()
+   at System.Net.FtpClient.FtpClient.Execute(String command)
+   at System.Net.FtpClient.FtpClient.OpenPassiveDataStream(FtpDataConnectionType type, String command, Int64 restart)
+   at System.Net.FtpClient.FtpClient.OpenDataStream(String command, Int64 restart)
+   at System.Net.FtpClient.FtpClient.GetListing(String path, FtpListOption options)
+   at System.Net.FtpClient.FtpClient.GetListing()
+   at FtpTest.FtpTests.VerifyListing(String host, String username, String password) in C:\Users\talan\Projects\FtpServerTest\FtpServerTest\FtpServerTest\FtpTests.cs:line 62
+   at FtpTest.FtpTests.TestCreated() in C:\Users\talan\Projects\FtpServerTest\FtpServerTest\FtpServerTest\FtpTests.cs:line 46
+Result Message:	
+Test method FtpTest.FtpTests.TestCreated threw exception: 
+System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+
