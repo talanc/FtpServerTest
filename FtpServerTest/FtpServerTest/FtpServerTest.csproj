@@ -35,20 +35,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FubarDev.FtpServer, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubarDev.FtpServer.1.2.0\lib\portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\FubarDev.FtpServer.dll</HintPath>
+    <Reference Include="FubarDev.FtpServer, Version=1.2.3.32606, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarDev.FtpServer.1.2.3\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\FubarDev.FtpServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FubarDev.FtpServer.AccountManagement, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubarDev.FtpServer.AccountManagement.1.2.0\lib\portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\FubarDev.FtpServer.AccountManagement.dll</HintPath>
+    <Reference Include="FubarDev.FtpServer.AccountManagement, Version=1.2.3.32606, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarDev.FtpServer.AccountManagement.1.2.3\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\FubarDev.FtpServer.AccountManagement.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FubarDev.FtpServer.FileSystem, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubarDev.FtpServer.FileSystem.1.2.0\lib\portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\FubarDev.FtpServer.FileSystem.dll</HintPath>
+    <Reference Include="FubarDev.FtpServer.FileSystem, Version=1.2.3.32604, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarDev.FtpServer.FileSystem.1.2.3\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\FubarDev.FtpServer.FileSystem.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FubarDev.FtpServer.FileSystem.DotNet, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubarDev.FtpServer.FileSystem.DotNet.1.2.0\lib\net45\FubarDev.FtpServer.FileSystem.DotNet.dll</HintPath>
+    <Reference Include="FubarDev.FtpServer.FileSystem.DotNet, Version=1.2.3.32607, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarDev.FtpServer.FileSystem.DotNet.1.2.3\lib\net45\FubarDev.FtpServer.FileSystem.DotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Minimatch, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0cadeb0b849c27c0, processorArchitecture=MSIL">
